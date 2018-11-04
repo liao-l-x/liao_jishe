@@ -1,0 +1,27 @@
+{% extends "muen/muen_sj.html" %}
+{% block  content%}
+    <style>
+    .user_mig{
+        width: 200px;
+        height: 200px;
+        border: 2px solid silver;
+        margin: 35px;
+        float: left;
+        background:url(/static/img_user/叹号.jpg) no-repeat 200px 200px;
+    }
+    .user_mig a {
+        display: inline-block;
+        margin: 20px 81px;
+    }
+    </style>
+    <div>
+    {% for user in user_dict %}
+        <div  class="user_mig" onclick="window.open('/muen/muen_xxx.html','_self')">
+            <a >{{ user.name }}</a>
+            <p>电话：{{ user.phone }}</p>
+            <p>职位：{{ user.part }}</p>
+            <p>入职时间：{{ user.creat_Time }}</p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

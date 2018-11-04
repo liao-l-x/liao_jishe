@@ -1,0 +1,21 @@
+{% extends "muen/muen_sj.html" %}
+{% block content %}
+    <style>
+    .from_notice{
+        text-align: center;
+    }
+    </style>
+    <div class="from_notice">
+         <form action="/muen/notice_info_app.html" method="post" novalidate >{#enctype="multipart/form-data" 文件#}
+            <p>标题<input type="text" name="title"></p>
+            内容<p><textarea name="content" clos=",50" rows="5" warp="virtual"></textarea></p>
+            <p>给：<select name="j_user">
+                 <option value="notice">发布通知</option>
+                {% for user in user_s %}
+                    <option value="{{ user}}">{{user.name }}</option>
+                {% endfor %}
+                </select></p>
+            <P style="margin:10px 44% 0"><input type="submit" value="发送"></P>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>畜牧管理系统</title>
+    <script src="/static/jquery-3.3.1.js"></script>
+    <style>
+        body{
+            margin: 0;
+        }
+         .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .head{
+             height: 48px;
+            background-color: #2f72ab;
+            min-width: 800px;
+            line-height: 48px;
+        }
+        .logo{
+             color: white;
+            font-size: 24px;
+            width: 190px;
+            background-color: #1c5a9c;
+            text-align: center;
+        }
+        .news,.notice,.my{
+            width: 90px;
+            text-align: center;
+            color: white;
+            margin:0 15px;
+            line-height: 48px;
+        }
+        .muen_like:hover{
+             background-color: #1c5a9c;
+        }
+        .my_submenu{
+            margin: -16px 0 0 1px;
+            width: 100px;
+            background-color: darkcyan;
+            display: none;
+
+        }
+        .my:hover .my_submenu{
+            display: block;
+        }
+        .muen{
+            width: 190px;
+            text-align: center;
+            color: midnightblue;
+             line-height: 48px;
+            background-color: lightgreen;
+            height: 580px;
+            position: absolute;
+        }
+        .block_a{
+            display: none;
+         }
+        .yi_muen:hover .item .block_a{
+             display: block;
+         }
+
+        .content{
+            margin-left: 190px;
+            margin-right: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="logo left">logo</div>
+        <div class="search muen_like left">
+            <input class="refer" type="text" value="畜舍">
+            <button onclick="refer()">提交</button>
+        </div>
+         <div class="my muen_like right" >{{ user_info.name }}
+            <div class=" my_submenu">
+                   <p> <a href="#" >我的升职记录</a></p>
+                    <p><a href="#" >我的公司详情</a></p>
+                   <p> <a href="#">我的个人信息</a></p>
+                </div>
+         </div>
+        <div class="news muen_like right"  onclick="window.open('/muen/info.html','_self')">消息{{ notice.0 }}
+        </div>
+        <div class="notice muen_like right" onclick="window.open('/muen/notice.html','_self')">通知{{ notice.1 }}</div>
+    </div>
+    <div class="muen left">
+
+    </div>
+    <div class="content">
+        {% block  content%}
+        {% endblock %}
+    </div>
+    <script>
+        //上一级菜单， 菜单的url   菜单的名称
+        window.onload=function(){
+            muen_if()
+            muen_else()
+        }
+        function muen_if() {
+            {% for i in muen %}
+                {% if not i.muen_hierarchy %}
+                     var frameDiv_{{ i.muen_class_name }} = document.createElement("div");//创建一个标签
+                    frameDiv_{{ i.muen_class_name }}.innerHTML = "{{ i.name }}";//菜单的名称
+                    frameDiv_{{ i.muen_class_name }}.className = "{{ i.muen_class_name }} yi_muen"; //给创建的a设置class；
+                     frameDiv_{{ i.muen_class_name }}.setAttribute("href", "{{ i.muen_url }}");//菜单的url
+                     var frameDiv_submenu_{{ i.muen_class_name }} = document.createElement("div");//创建一个标签
+                    frameDiv_submenu_{{ i.muen_class_name }}.className = "{{ i.muen_class_name }}_submenu  item"; //给创建的a设置class；
+                    frameDiv_{{ i.muen_class_name }}.appendChild(frameDiv_submenu_{{ i.muen_class_name }});//把创建的节点frameDiv 添加到父类body 中；
+                    var muen = document.getElementsByClassName("muen")[0]
+                     muen.appendChild(frameDiv_{{ i.muen_class_name }});//把创建的节点frameDiv 添加到父类body 中；
+              {% endif %}
+            {% endfor %}
+        }
+        function muen_else() {
+            {% for i in muen %}
+                {% if  i.muen_hierarchy %}
+                    var bodyFa_{{ i.muen_hierarchy.muen_class_name }} = document.getElementsByClassName("{{ i.muen_hierarchy.muen_class_name }}_submenu")[0];//通过class号获取frameDiv 的父类（也就是上一级的节点）
+                        var frameDiv_submenu_{{ i.muen_class_name }} = document.createElement("a");//创建一个标签
+                        frameDiv_submenu_{{ i.muen_class_name }}.setAttribute("href", "{{ i.muen_url }}");//菜单的url  暂时没有
+                        frameDiv_submenu_{{ i.muen_class_name }}.className = "block_a"; //给创建的a设置class；
+                        frameDiv_submenu_{{ i.muen_class_name }}.innerHTML = "{{ i.name }}";//菜单的名称
+                        bodyFa_{{ i.muen_hierarchy.muen_class_name }}.appendChild(frameDiv_submenu_{{ i.muen_class_name }});//把创建的节点frameDiv 添加到父类body 中；
+                {% endif %}
+            {% endfor %}
+        }
+        function refer() {
+            var v = $(".refer").val();
+            $.ajax({
+                 type: "POST",
+                 url: "/muen/muen_shuo.html",
+                 data: {muen_shuo:v},
+                 dataType: "json",
+                 success: function(data){
+                                var bodyFa = document.getElementsByClassName("content")[0]
+                                var frameDiv = document.createElement("div");
+                                for(i in data){
+                                    var frameDiv_1_2 = document.createElement("div");
+                                    frameDiv_1_2.innerHTML =data[i][2] + data[i][1];
+
+                                    //布局。。。。。
+
+                                     frameDiv.appendChild(frameDiv_1_2);
+
+                                }
+                                bodyFa.appendChild(frameDiv);//把创建的节点frameDiv 添加到父类body 中；
+
+
+                          }
+            })
+        }
+    </script>
+</body>
+</html>

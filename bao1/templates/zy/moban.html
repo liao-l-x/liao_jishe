@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+           .menu{
+            width: 100%;
+            height: 40px;
+            background-color: #d0fff7;
+        }
+        .content{
+            width: 70%;
+            height: 200px;
+            float: left;
+        }
+        .ladel{
+            width: 30%;
+            height: 200px;
+            background-color: rosybrown;
+            float: right;
+        }
+        .ladel2{
+               width: 30%;
+            height: 200px;
+            background-color:green;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        {% block menu %}{% endblock %}
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="ladel">
+        {% block ladel %}{% endblock %}
+    </div>
+    <div class="ladel2">
+        {% block ladel2 %}{% endblock %}
+    </div>
+</body>
+</html>

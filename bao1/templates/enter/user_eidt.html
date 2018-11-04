@@ -1,0 +1,33 @@
+{% extends "enter/moban.html" %}
+
+{% block  content %}
+     <style>
+    .lg{
+        width: 80%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    </style>
+    <h3 style="margin:10px 44% 0">修改</h3>
+    <div class="lg">
+    {{ cw }}
+        <form action="/web/user_eidt" method="post" novalidate enctype="multipart/form-data">
+            <p>{{ userfrom.name.label }}:{{ userfrom.name }}{{ userfrom.errors.name }}</p>
+            <p>{{ userfrom.mail.label }}:{{ userfrom.mail }}{{ userfrom.errors.mail }}</p>
+            <p>{{ userfrom.pwd.label }}:{{ userfrom.pwd }}{{ userfrom.errors.pwd }}</p>
+            <p>{{ userfrom.img.label }}:<img src="/{{ img }}" style="width: 40px;height: 50px" >
+                {{ userfrom.img }}{{ userfrom.errors.img }}
+            </p>
+
+            <P style="margin:10px 44% 0"><input type="submit" value="修改"></P>
+        </form>
+    </div>
+<script type="text/javascript">
+
+window.onload=function(){
+    var imgid = document.getElementById("id_img");
+    imgid.setAttribute("value","/{{ img }}")
+    {#imgid.previousSibling.value="/{{ img }}"#}
+}
+</script>
+{% endblock %}

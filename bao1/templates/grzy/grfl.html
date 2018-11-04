@@ -1,0 +1,35 @@
+{% extends 'grzy/moban.html' %}
+{% block title %}
+    <p>{{ bk.theme }}</p>
+{% endblock %}
+
+{% block content %}
+    {% for i in wz %}
+        <h3><a href="/web/{{ bk.suffixURL }}/{{i.id}}.html">{{ i.title }}---标题</a></h3>
+       <p>{{ i.article_nr_id.content }} ---内容</p>
+    <P>{{ i.C_time }}</P>
+    {% endfor %}
+{% endblock %}
+
+{% block ladel %}
+    <ul>
+    <li>{{ bk.user_id.name }}—用户名</li>
+    <li> <img src="/{{ bk.user_id.img }}">--头像</li>
+    <li>{{ kb.title }}--标题</li>
+    </ul>
+{% endblock %}
+
+ {% block ladel2 %}
+     分类
+     <ul>
+     {% for i in fl %}
+            <li><a href="/web/{{ bk.suffixURL }}/grzy/{{i.name}}.html">{{ i.name }}</a></li>
+     {% endfor %}
+     </ul>
+     标签
+     <ul>
+     {% for i in bq %}
+            <li><a href="/web/{{ bk.suffixURL }}/grzy/{{i.id}}">{{ i.label }}</a></li>
+     {% endfor %}
+     </ul>
+ {% endblock %}

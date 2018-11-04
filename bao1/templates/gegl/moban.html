@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+     <script src="/static/js/jquery-3.3.1.js"></script>
+    <style>
+        body{
+            margin: 0;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .hide{
+            display: none;
+        }
+        .pg-head{
+            height: 48px;
+            background-color: #2f72ab;
+            min-width: 800px;
+            line-height: 48px;
+        }
+        .pg-head .logo{
+            color: white;
+            font-size: 24px;
+            width: 190px;
+            background-color: #1c5a9c;
+            text-align: center;
+        }
+        .pg-head .hr-menu{
+            height: 48px;
+        }
+        .pg-head  .hl-menu .item, .pg-head  .hr-menu .item{
+            {#a标签#}
+            color: white;
+            padding:0 10px;
+            {#height: 48px;#}
+            display: inline-block;
+            line-height: 48px;
+        }
+         .pg-head  .hl-menu .item:hover, .pg-head  .hr-menu .item:hover{
+             {#当鼠标放到a标签上时#}
+             background-color: #1c5a9c;
+         }
+        .pg-head  .hl-menu .item-set{
+            {#要弹出隐藏目录的标签#}
+            display: inline-block;
+            position: relative;
+        }
+        .pg-head  .hl-menu .item-set .sets{
+            {#隐藏目录的盒子#}
+            z-index: 100;
+            position:absolute;
+            width: 90px;
+            background-color:olivedrab;
+            border: 1px solid #dddddd;
+            text-align: center;
+            line-height: 30px;
+            display: none;
+            left: -20px;
+        }
+        .pg-head  .hl-menu .item-set .sets a, .pg-head  .hr-menu .avatar .sets a{
+            {#隐藏目录的a标签#}
+            display: block;
+            left: 5px;
+            background-color: #000000;
+        }
+        .pg-head  .hl-menu .item-set:hover .sets,.pg-head  .hr-menu .avatar:hover .sets{
+            {#当鼠标放在要弹出目录的标签时，隐藏目录的盒子要怎么。。#}
+            display: block;
+        }
+        .pg-head  .hr-menu .avatar a img{
+            {#头像#}
+            width: 48px;
+            height: 100%;
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+         .avatar{
+            {#要弹出隐藏目录的标签#}
+            display: inline-block;
+            position: relative;
+             {#top: 6px;#}
+        }
+        .pg-head  .hr-menu .avatar .sets{
+            {#隐藏目录的盒子#}
+            z-index: 100;
+            position:absolute;
+            width: 90px;
+            background-color:olivedrab;
+            border: 1px solid #dddddd;
+            text-align: center;
+            line-height: 30px;
+            display: none;
+            left: -20px;
+            margin-top: -10px;
+        }
+        .pg-body .content{
+            background-color:#f0f0f0;
+            position: absolute;
+            top: 48px;
+            bottom: 0;
+            right: 0;
+            left: 190px;
+            overflow: scroll;
+        }
+        .pg-body .menu{
+            {#background-color: darkcyan;#}
+            width: 190px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 48px;
+        }
+        .menu .item .item-title{
+            padding: 8px;
+            background-color: lavender;
+        }
+        .menu .item .item-content a{
+            padding: 2px 15px;
+            display: block;
+            border-left: 3px solid transparent;
+        }
+         .menu .item .item-content a:hover{
+             border-left: 3px solid blue;
+         }
+         .menu .item .item-content .active{
+             border-left: 3px solid blue;
+        }
+    </style>
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <div class="pg-head">
+        <div class="logo left">logo</div>
+        <div class="hl-menu left">
+            <div class="item-set">
+                <a class="item">菜单四</a>
+                <div class="sets">
+                    <a href="#" >菜单四-1</a>
+                    <a href="#" >菜单四-2</a>
+                    <a href="#">菜单四-3</a>
+                </div>
+            </div>
+            <div class="item-set">
+                <a class="item">菜单四</a>
+                <div class="sets">
+                    <a href="#" >菜单四-1</a>
+                    <a href="#" >菜单四-2</a>
+                    <a href="#">菜单四-3</a>
+                </div>
+            </div>
+        </div>
+        <div class="hr-menu right">
+            <a class="item" href="#">消息</a>
+            <a class="item" href="#">通知</a>
+            <a class="item" href="#">任务</a>
+            <div class="avatar right">
+                <a class="item" href="#">
+                    <img src="/static/user_img/11.jpg" style="height: 100%">
+                </a>
+                <div class="sets">
+                    <a  class="item" href="#" >菜单四-1</a>
+                    <a  class="item" href="#" >菜单四-2</a>
+                    <a  class="item" href="#">菜单四-3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pg-body">
+        <div class="menu">
+            <div class="item ">
+            <div class="item-title">知识库管理</div>
+            <div class="item-content hide">
+                <a id="menu-wz">文章管理</a>
+                <a id="menu-bq">标签管理</a>
+                <a id="menu-fl">分类管理</a>
+            </div>
+            </div>
+            <div class="item ">
+            <div class="item-title">菜单2</div>
+            <div class="item-content hide">
+                <a>菜单2-1</a>
+                <a>菜单2-2</a>
+                <a>菜单2-3</a>
+            </div>
+            </div>
+        </div>
+        <div class="content">
+           {% block content%}{% endblock %}
+        </div>
+    </div>
+    <div class="pg-bottom"></div>
+
+   {% block js %}{% endblock %}
+</body>
+</html>

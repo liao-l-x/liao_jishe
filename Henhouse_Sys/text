@@ -1,0 +1,27 @@
+{#        <div class="staff">员工管理#}
+{#            <div class=" staff_submenu">#}
+{#                    <a class="block_a" href="#" >员工消息</a>#}
+{#                    <a class="block_a" href="#" >员工添加</a>#}
+{#                    <a class="block_a" href="#">分配任务</a>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="company">公司管理#}
+{#            <div class=" company_submenu">#}
+{#                    <a class="block_a" href="#" >公司消息</a>#}
+{#                    <a class="block_a" href="#" >公司添加</a>#}
+{#                    <a class="block_a" href="#">分配任务</a>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="personal">个人信息管理#}
+{#            <div class=" personal_submenu">#}
+{#                    <a class="block_a" href="#" >密码修改</a>#}
+{#                    <a class="block_a" href="#" >查看信息</a>#}
+{#                    <a class="block_a" href="#">查看任务</a>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="system">系统管理#}
+{#        <div class=" system_submenu">#}
+{#                    <a class="block_a" href="#" >操作记录</a>#}
+{#                    <a class="block_a" href="#" >系统bug</a>#}
+{#                    <a class="block_a" href="#">系统情况</a>#}
+{#            </div></div>#}

@@ -1,0 +1,36 @@
+{% extends "muen/muen_sj.html" %}
+{% block  content%}
+    <style>
+    .wai{
+         text-align: center;
+        border: 2px solid silver;
+        margin: 0 300px;
+        width: 300px;
+        height: 400px;
+    }
+    .tijiao{
+           margin-top: 340px;
+    }
+    .info_s_x{
+        display: inline;
+    }
+
+    </style>
+
+        <div class="tijiao"><input type="text" name="info_data" class="info_su">
+            <button onclick="submit_b()">发送</button></div>
+      <script>
+      function submit_b() {
+          var v = $(".info_su").val();
+          $.ajax({
+              type: "POST",
+              url: "/muen/info.html",
+              data: {muen_shuo: v},
+              dataType: "json",
+              success: function (data) {
+
+              }
+          })
+      }
+     </script>
+{% endblock %}

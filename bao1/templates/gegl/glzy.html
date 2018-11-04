@@ -1,0 +1,68 @@
+{% extends "gegl/moban.html" %}
+{% block css %}
+    <style>
+    .search{
+        background-color: #d0fff7;
+        margin: 0;
+        border-bottom: 1px solid #000000;
+    }
+    .search-title{
+        font-size: 20px;
+        background-color: #29679a;
+         border-bottom: 1px solid #000000;
+    }
+    .fenlei,.biaoqian{
+        margin: 10px 40px;
+    }
+    .fenlei a:hover,.biaoqian a:hover{
+        background-color: khaki;
+    }
+
+    .wz{
+        margin: 5px;
+    }
+    .caozhuo{
+        float: right;
+    }
+    </style>
+{% endblock %}
+ {% block content%}
+     <div>
+        <div class="search">
+            <div class="search-title">筛选：</div>
+            <div class="fenlei">分类：
+                <a href="/web/manage-x-{{ sx.fl }}">全部</a>
+                {% for i in fl %}
+                <a href="/web/manage-{{ i.id }}-{{ sx.fl }}">{{ i.name }}</a>
+                {% endfor %}
+            </div>
+         <div class="biaoqian">标签：
+                <a href="/web/manage-{{ sx.bq }}-x">全部</a>
+                {% for i in bq %}
+                <a href="/web/manage-{{ sx.bq }}-{{ i.id }}">{{ i.label }}</a>
+                {% endfor %}
+         </div>
+        </div>
+     <div class="add-caozhuo" >增加</div>
+        <div class="wz ">
+
+            {% for i in wz %}
+                <div class="caozhuo">
+                    <a href="/web/1edit/{{i.id}}.html">编辑</a>
+                    <a>删除</a>
+                </div>
+                <div><a href="/web/{{ bk.suffixURL }}/{{i.id}}.html">{{ i.title }}</a></div>
+                <div>{{ i.article_nr_id.content }}</div>
+                <div>{{ i.C_time }}</div>
+            {% endfor %}
+        </div>
+     </div>
+ {% endblock %}
+{% block js %}
+     <script>
+       $( function() {
+            $('#menu-wz').addClass('active');
+           $('#menu-wz').parent().removeClass('hide')
+        })
+    </script>
+{% endblock %}

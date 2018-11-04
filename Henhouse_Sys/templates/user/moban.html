@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        .content{
+            width: 40%;
+            margin-left:auto;
+            margin-right:auto;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <a href="/user/log.html">我要登入</a>
+{#    <a href="/user/enroll">我要注册</a>#}
+</div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

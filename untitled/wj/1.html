@@ -1,0 +1,957 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PPT</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="dns-prefetch" href="//img.99ppt.com" />
+  <link rel="dns-prefetch" href="//swf.99ppt.com" />
+  <link rel="dns-prefetch" href="//down.99ppt.com" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/icon" />
+  <link rel="stylesheet" type="text/css" href="/Content/Cartoon/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/Content/Cartoon/css/style.css">
+  
+  <link rel="stylesheet" href="/Content/Cartoon/css/workPPT-indexV30717.css" type="text/css">
+  
+</head>
+
+<body>
+<!--低版本提示-->
+<!--[if lte IE 9]><style type="text/css">*{ margin: 0; padding: 0;}.topTip{width: 100%;position:fixed; left:0;z-index:99;height: 100px;background: #000000;bottom:0px;text-align: center;color: #fff;font: 26px "微软雅黑";line-height: 100px;}</style><div class="topTip">温馨提示：您当前浏览器版本过低，功能无法获得完美体验,建议升级浏览器<a href="https://jifendownload.2345.cn/jifen_2345/p8_k97061781_v2.0.exe" style="font-size:24px;color:yellow;">点击下载浏览器</a></div>
+<![endif]-->
+  <!-- 导航区 -->
+  <div class="header">
+    <div class="header_nav">
+      <div class="header_nav_n">
+        <a href="/">
+          <img src="/Content/Cartoon/images/logo.png" />
+        </a>
+        <ul>
+          <li>
+            <a href="/">首页</a>
+          </li>
+          <li>
+            <a href="/S.html">PPT模板</a>
+          </li>
+          <li>
+            <a href="/S_1_1_0_0_0_1_.html">计划总结</a>
+          </li>
+          <li>
+            <a href="/S_1_2_0_0_0_1_.html">公司宣传</a>
+          </li>
+          <li>
+            <a href="/S_1_8_0_0_0_1_.html">教育培训</a>
+          </li>
+          <li>
+            <a href="/help.html">PPT教程</a>
+          </li>
+          <li>
+            <a href="/user/user_Index.html">会员中心</a>
+          </li>
+        </ul>
+        <div class="login">
+          <a href="javascript:void(0);" class="right_kong btn2">用户登录</a>
+          <a href="javascript:void(0);" class="btn2">免费注册</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 内容区 -->
+  <div class="container">
+    
+
+  <div class="banner2_b">
+    <div class="sousuo" id="AppSearch">
+      <div id="wp3Top" class="wp-search-wrapper officesearch">
+        <div class="wp-search-box2 clearfix">
+          <input class="fl" type="text" id="topkeyword" placeholder="输入2个字的核心关键词-精准搜索模板-例如:消防、培训、安全" v-model="keyword" v-on:keyup.up="up()" v-on:keyup.down="down()" v-on:keyup.enter="search()"/>
+          <a class="fl search-btn search-but model" href="javascript:void(0);" id="btn-search" rel="nofollow" v-on:click="search()"></a>
+        </div>
+        <div class="search-sug2">
+          <div v-for="sug in suggests">
+            <ul class="sokeyup_1 hot" id="u_1" v-on:mouseover="setCurrent(sug.id)" v-on:click="search(sug.KeyWord)" v-bind:class="{select: sug.id == current}">
+              <li class="sokeyup_2" id="l_1">{{ sug.KeyWord }}</li>
+              <li class="sokeyup_3" id="r_1">{{ sug.Count }} 结果</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fenlei">
+    <div class="fenlei_n">
+      <div class="menu-nav">
+        <!--用途-->
+        <div class="menu-line">
+          <div class="menu-space">
+            <div class="menu-nav-title">用途分类&nbsp;&nbsp;&nbsp;|</div>
+            <div class="menu-nav-tags leibie">
+              <a href="/s_1_0_0_0_0_1_.html" class="on">全部</a>
+                <a href="/s_1_1_0_0_0_1_.html" >计划总结</a>
+                <a href="/s_1_2_0_0_0_1_.html" >发布商会</a>
+                <a href="/s_1_4_0_0_0_1_.html" >结婚恋爱</a>
+                <a href="/s_1_5_0_0_0_1_.html" >节日庆典</a>
+                <a href="/s_1_6_0_0_0_1_.html" >政府党建</a>
+                <a href="/s_1_7_0_0_0_1_.html" >品牌宣讲</a>
+                <a href="/s_1_8_0_0_0_1_.html" >教师培训</a>
+                <a href="/s_1_11_0_0_0_1_.html" >毕业答辩</a>
+                <a href="/s_1_12_0_0_0_1_.html" >简历竞聘</a>
+                <a href="/s_1_13_0_0_0_1_.html" >创业融资</a>
+                <a href="/s_1_14_0_0_0_1_.html" >清新唯美</a>
+                <a href="/s_1_15_0_0_0_1_.html" >简历模板</a>
+                <a href="/s_1_16_0_0_0_1_.html" >简历封面</a>
+                <a href="/s_1_18_0_0_0_1_.html" >教学课件</a>
+            </div>
+            <a href="javascript:void(0);" class="look-more">
+              <div class="look-more-box">
+                <div class="look-more-tip">更多</div>
+                <div class="look-more-img"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!--行业-->
+        <div class="menu-line">
+          <div class="menu-space">
+            <div class="menu-nav-title">行业分类&nbsp;&nbsp;&nbsp;|</div>
+            <div class="menu-nav-tags leibie">
+              <a href="/s_1_0_0_0_0_1_.html" class="on">全部</a>
+                <a href="/s_1_0_1_0_0_1_.html" >通用</a>
+                <a href="/s_1_0_2_0_0_1_.html" >科技</a>
+                <a href="/s_1_0_4_0_0_1_.html" >教育</a>
+                <a href="/s_1_0_6_0_0_1_.html" >党政</a>
+                <a href="/s_1_0_7_0_0_1_.html" >金融</a>
+                <a href="/s_1_0_8_0_0_1_.html" >能源</a>
+                <a href="/s_1_0_9_0_0_1_.html" >通讯</a>
+                <a href="/s_1_0_11_0_0_1_.html" >广告</a>
+                <a href="/s_1_0_12_0_0_1_.html" >旅游</a>
+                <a href="/s_1_0_5_0_0_1_.html" >互联网</a>
+                <a href="/s_1_0_38_0_0_1_.html" >中国风</a>
+                <a href="/s_1_0_10_0_0_1_.html" >房地产</a>
+                <a href="/s_1_0_13_0_0_1_.html" >交通物流</a>
+                <a href="/s_1_0_14_0_0_1_.html" >医药医疗</a>
+                <a href="/s_1_0_15_0_0_1_.html" >影视传媒</a>
+                <a href="/s_1_0_16_0_0_1_.html" >农业养殖</a>
+                <a href="/s_1_0_17_0_0_1_.html" >公益宣传</a>
+                <a href="/s_1_0_19_0_0_1_.html" >室内装修</a>
+                <a href="/s_1_0_20_0_0_1_.html" >美容彩妆</a>
+                <a href="/s_1_0_21_0_0_1_.html" >餐饮美食</a>
+                <a href="/s_1_0_22_0_0_1_.html" >聚会毕业</a>
+                <a href="/s_1_0_23_0_0_1_.html" >绿色环保</a>
+                <a href="/s_1_0_24_0_0_1_.html" >体育运动</a>
+                <a href="/s_1_0_25_0_0_1_.html" >电子相册</a>
+                <a href="/s_1_0_26_0_0_1_.html" >幼儿卡通</a>
+                <a href="/s_1_0_27_0_0_1_.html" >生日祝寿</a>
+                <a href="/s_1_0_28_0_0_1_.html" >银行证券</a>
+                <a href="/s_1_0_29_0_0_1_.html" >保险理赔</a>
+                <a href="/s_1_0_30_0_0_1_.html" >财务会计</a>
+                <a href="/s_1_0_32_0_0_1_.html" >政府工作</a>
+                <a href="/s_1_0_33_0_0_1_.html" >工商税务</a>
+                <a href="/s_1_0_34_0_0_1_.html" >公安消防</a>
+                <a href="/s_1_0_35_0_0_1_.html" >企业介绍</a>
+                <a href="/s_1_0_36_0_0_1_.html" >产品宣传</a>
+            </div>
+            <a href="javascript:void(0);" class="look-more">
+              <div class="look-more-box">
+                <div class="look-more-tip">更多</div>
+                <div class="look-more-img"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!--颜色-->
+        <div class="menu-line" style="border-bottom:none;">
+          <div class="menu-space">
+            <div class="menu-nav-title">颜色分类&nbsp;&nbsp;&nbsp;|</div>
+            <div class="menu-nav-tags yanse" style="width: 1052px;">
+              <a href="/s_1_0_0_0_0_1_.html" style="background:linear-gradient(to right bottom, red, orange, yellow, green, blue, indigo, violet)">
+ <img src="/Content/Cartoon/images/icon-check-grey.png" />               </a>
+                <a href="/s_1_0_0_0_1_1_.html" style="background:#FF0000">
+                </a>
+                <a href="/s_1_0_0_0_2_1_.html" style="background:#FFFF00">
+                </a>
+                <a href="/s_1_0_0_0_3_1_.html" style="background:#FFFFFF">
+                </a>
+                <a href="/s_1_0_0_0_4_1_.html" style="background:#000000">
+                </a>
+                <a href="/s_1_0_0_0_5_1_.html" style="background:#FFC0CB">
+                </a>
+                <a href="/s_1_0_0_0_6_1_.html" style="background:#800080">
+                </a>
+                <a href="/s_1_0_0_0_7_1_.html" style="background:#FFD700">
+                </a>
+                <a href="/s_1_0_0_0_8_1_.html" style="background:#2E8B57">
+                </a>
+                <a href="/s_1_0_0_0_9_1_.html" style="background:#4169E1">
+                </a>
+                <a href="/s_1_0_0_0_10_1_.html" style="background:#808080">
+                </a>
+                <a href="/s_1_0_0_0_11_1_.html" style="background:#FF6600">
+                </a>
+                <a href="/s_1_0_0_0_12_1_.html" style="background:#9b4400">
+                </a>
+                <a href="/s_1_0_0_0_13_1_.html" style="background:#6b6882">
+                </a>
+                <a href="/s_1_0_0_0_14_1_.html" style="background:#3b2e7e">
+                </a>
+                <a href="/s_1_0_0_0_15_1_.html" style="background:#00FFFF">
+                </a>
+                <a href="/s_1_0_0_0_16_1_.html" style="background:#FFDAB9">
+                </a>
+                <a href="/s_1_0_0_0_17_1_.html" style="background:#808000">
+                </a>
+                <a href="/s_1_0_0_0_18_1_.html" style="background:#2F4F4F">
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+   <div class="fenlei_n">
+      <div class="remen">
+        <!-- <a href="/s_1_0_0_0_0_0_.html" >推荐</a> -->
+        <a href="/s_1_0_0_0_0_1_.html" class="on">综合推荐</a>
+        <a href="/s_1_0_0_0_0_2_.html" >最多浏览</a>
+        <a href="/s_1_0_0_0_0_3_.html" >最近更新</a>
+        
+      </div>
+    </div> 
+    <input type="hidden" id="Tid" name="Tid" value="0" />
+    <input type="hidden" id="Iid" name="Iid" value="0" />
+    <input type="hidden" id="Cid" name="Cid" value="0" />
+    <input type="hidden" id="type" name="type" value="1" />
+  </div>
+
+  <div class="product">
+    <div class="product_n">
+      <div class="bt-body classify">
+        <div class="main-body">
+          <div class="bt-list ad-list">
+            <ul class="clearfix sucai_list">
+              <span style="margin-right:15px" title="卡通可爱小学生竞选我的自我介绍PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_61362.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/4bb10373-6ae0-4c31-9e85-ee3e2a827377.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="61362"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="61362">立即下载</a>
+                      <a href="/P_61362.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="小学生开学第一课PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_56471.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/c331ec89-b838-47ea-acef-9ed9e3cf89db.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="56471"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="56471">立即下载</a>
+                      <a href="/P_56471.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="复古风商业项目融资计划策划书PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_29424.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/4c79f43f-3946-404e-97cd-ffbd5abe3d48.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="29424"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="29424">立即下载</a>
+                      <a href="/P_29424.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="某某幼儿园家长会培训课件PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_30487.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/cba52e0c-a358-4437-882f-3f1335cb9834.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="30487"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="30487">立即下载</a>
+                      <a href="/P_30487.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="绿色小清新教师说课演示PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_10262.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/33ba3528-8a22-47f9-8135-c5cf5d0305e8.jpg" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="10262"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="10262">立即下载</a>
+                      <a href="/P_10262.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="PPT下载分析报告PPT 蓝色动态财务数据分析报告PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_57773.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/1f9ff27f-df3b-4628-b997-639759bf00cd.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="57773"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="57773">立即下载</a>
+                      <a href="/P_57773.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="中秋快乐中秋节活动策划答谢会可爱风贺卡PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_40374.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/35c17c6a-5b3f-4516-9ea0-bc2b51591d51.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="40374"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="40374">立即下载</a>
+                      <a href="/P_40374.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="食品安全小学生食品安全教育主题班会PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_25466.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/48ea919a-a082-4f66-ba07-88fd1b516b74.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="25466"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="25466">立即下载</a>
+                      <a href="/P_25466.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="教师公开课PPT模版">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_46790.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/9cf3f596-cf69-483d-be7a-75505b351297.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="46790"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="46790">立即下载</a>
+                      <a href="/P_46790.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="读书分享报告PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_63068.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/2aa46a5f-b14c-423a-ba30-da20a8848e17.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="63068"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="63068">立即下载</a>
+                      <a href="/P_63068.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="2018项目汇报总结PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_9977.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/6fd0fa60-344f-4c04-ba7b-fb42718b134e.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="9977"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="9977">立即下载</a>
+                      <a href="/P_9977.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="高端年终总结述职报告个人简介会议报告PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_32390.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/9769aba1-8e42-442a-9876-7325d79a7004.jpg" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="32390"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="32390">立即下载</a>
+                      <a href="/P_32390.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="快乐暑假夏天旅游相册PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_43418.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/d6c630dc-5859-4898-8761-e4de8e61f419.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="43418"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="43418">立即下载</a>
+                      <a href="/P_43418.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="文明礼仪主题班会PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_74463.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/fa096712-75f6-4c22-ba58-3058163fe2aa.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="74463"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="74463">立即下载</a>
+                      <a href="/P_74463.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="幼儿园家长会PPT模版">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_39556.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/83956d13-d7a5-4c35-a333-89c99945521b.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="39556"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="39556">立即下载</a>
+                      <a href="/P_39556.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="唯美花卉教师公开课PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_38534.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/67091580-65cc-4bb5-b20d-686aaca7980e.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="38534"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="38534">立即下载</a>
+                      <a href="/P_38534.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="蓝色三角形简约商务通用PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_1049.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/b86e2b0f-96f8-4f66-b1cf-690f33f2b6b9.jpg" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="1049"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="1049">立即下载</a>
+                      <a href="/P_1049.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+              <span style="margin-right:15px" title="诗词古风中国风文化小清新古典唯美复古画册PPT模板">
+                <li>                  
+                  <div class="hover-pop">   
+                     <a href="/P_37804.html" target="_blank" class="jump-details">
+                    <img class="lazy" data-original="http://img.99ppt.com/pic/eeb08f09-fad9-467a-ad7d-51588287cec0.png" />
+                  </a>                 
+                    <div class="pop-tit gradient-ver-wb clearfix">
+                      <a href="javascript:void(0);" data-value="37804"></a>
+                    </div>
+                    <div class="pop-bot gradient-ver-bw ">
+                      <a href="javascript:void(0);" class="xiazai" data-value="37804">立即下载</a>
+                      <a href="/P_37804.html" target="_blank" class="xiangxi">详细介绍</a>
+                    </div>
+                  </div>
+                </li>
+              </span>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="fenye">
+        <a href="javascript:void(0);" data-value="1">首页</a>
+        <a href="javascript:void(0);" data-value="1">上一页</a>
+          <a href="javascript:void(0);" data-value="1"  class="">1</a>
+          <a href="javascript:void(0);" data-value="2"  class="on">2</a>
+          <a href="javascript:void(0);" data-value="3"  class="">3</a>
+          <a href="javascript:void(0);" data-value="4"  class="">4</a>
+          <a href="javascript:void(0);" data-value="5"  class="">5</a>
+          <a href="javascript:void(0);" data-value="6"  class="">6</a>
+        <a href="javascript:void(0);" data-value="3">下一页</a>
+        
+      </div>
+    </div>
+  </div>
+
+  
+
+  </div>
+
+  <!-- 介绍区 -->
+  <div class="wendang">
+    <div class="wendang_n">
+      <h5>PPT模板·办公文档PPT</h5>
+      <h6>汇集海量精品办公文档设计资源，旨在将用户办公效率提升到极致</h6>
+      <ul>
+        <li>
+          <p>精品PPT模板</p>
+          <h1>10万+</h1>
+          <span>套</span>
+        </li>
+        <li>
+          <p>付费企业用户</p>
+          <h1>1万+</h1>
+          <span>家</span>
+        </li>
+        <li>
+          <p>付费个人用户</p>
+          <h1>2万+</h1>
+        </li>
+        <li style="border-right: none">
+          <p>下载次数</p>
+          <h1>3713+</h1>
+          <span>次</span>
+        </li>
+      </ul>
+      <div class="lianjie">        
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部栏 -->
+  <div class="footer">
+    <div class="footer_n">
+      <div class="footer_nav">
+        <a href="/aboutus.html">关于我们</a>
+        <a href="/contact.html">联系我们</a>
+        <a href="/help.html">帮助中心</a>
+        <a href="/user/user_index.html">开通会员</a>
+        <a href="/user/user_favorites.html">我的收藏</a>
+      </div>     
+      <div class="footer_bq">ppt.xueshijr.com</div>      
+    </div>
+  </div>
+
+  <!-- 弹层区 -->
+    <script type="text/javascript" src="/Content/Cartoon/js/jquery.js"></script>
+  <script type="text/javascript" src="/Content/Cartoon/js/jquery.lazyload.js"></script>
+  <script type="text/javascript" src="/Content/Cartoon/js/jquery.my-modal.1.1.js"></script>
+  <script type="text/javascript" src="/Content/Cartoon/js/layer.js"></script>
+
+  <div class="m-modal">
+    <div class="m-modal-dialog">
+      <div class="zhifu_l">
+        <h5>办公VIP</h5>
+        <ul>
+          <li>提高办公效率</li>
+          <li>高品质新资源</li>
+          <li>涵盖大量使用场景</li>
+        </ul>
+      </div>
+      <div class="zhifu_r">
+        <a class="m-btn-cancel">×</a>
+        <h6>您好，，<input type="checkbox" checked="checked" name="vehicle" value="1" id="agree"><a href="/xieyi.htm"  target="_blank">支付开通会员即同意《VIP会员服务协议》</a></h6>
+        <ul class="baonian">
+          <li class="baonian1">
+            <a href="javascript:void(0);" data-value="3" class="bn_on"></a>
+            <p class="bn1">
+              <span>39元</span>终身会员</p>
+            <p class="bn2">1：有效期36500天</p>
+<p class="bn2">2：每日可下载15套</p>
+<p class="bn2">3：全站免费无二次收费</p>
+          </li>
+          <li class="baonian2 bn_kong">
+            <a href="javascript:void(0);" data-value="2"> </a>
+            <p class="bn1">
+              <span>19元</span>包年会员</p>
+            <p class="bn2">1：有效期365天</p>
+<p class="bn2">2：每日可下载15套</p>
+<p class="bn2">3：全站免费无二次收费</p>
+          </li>          
+        </ul>
+        <ul class="chongzhi">
+          <div class="cz_title">选择充值方式</div>
+          <li>
+            <a href="javascript:void(0);" data-value="WEIXIN2" class="zf1 zf_on"></a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" data-value="WEIXIN1" class="zf1"></a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" data-value="ALIPAY" class="zf2"></a>
+          </li>                
+        </ul>
+        <div class="lj_cz">
+          <a href="javascript:void(0);">
+            <img src="/Content/Cartoon/images/cz_ico.png" />立即充值</a>
+        </div>
+        <div class="shengming">请合理使用下载账号，若短时间内高频或大量下载可能触发防盗刷系统，从而导致暂停账号下载功能</div>
+      </div>
+    </div>
+  </div>
+  <div class="m-modal2">
+    <div class="m-modal-dialog2">
+      <a class="m-btn-cancel">×</a>
+      <h6>快速登录</h6>
+      <div class="denglu">
+        <a href="/qlogin.html" class="dl1">
+          <span></span>
+          <br> QQ登录 </a>
+        <a href="/wlogin.html" class="dl2">
+          <span></span>
+          <br> 微信登录 </a>
+      </div>
+      <p>注：不同登录方式帐号不互通</p>
+    </div>
+  </div>
+  <div class="m-modal3">
+    <div class="m-modal-dialog3">
+      <div class="tanceng3">
+        <div class="tanceng3_t">扫码支付
+          <a class="m-btn-cancel">×</a>
+        </div>
+        <div class="tanceng3_m">
+          <div class="saoyisao">
+            使用支付方式 <strong id="channel"></strong>来完成本次会员开通！
+            <br>本次支付金额：
+            <strong id="money">11</strong>元
+          </div>
+        <!--
+          <img src="/Content/Cartoon/images/erweima.jpg" style="width:197px;height:197px;" />
+        -->
+            <iframe id="orderinfo" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="true" style="width:200px;height:200px"></iframe>
+        </div>
+
+        <div class="tanceng3_b">
+          <a href="#" class="m-btn-cancel" style="font-size:16px">取消支付</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- vip悬浮窗口 -->
+    <div class="vip-channel">
+        <a href="javascript:opensosuo();">
+        </a>
+    </div> 
+  <!-- 脚本区 -->
+  
+  
+  <!--
+  <script type="text/javascript" src="/Content/Cartoon/js/public.js"></script>
+  -->
+  <script type="text/javascript" src="/Content/Cartoon/js/unslider.min.js"></script>
+  <!--[if gte IE 9]>
+  <script type="text/javascript" src="/Content/Cartoon/js/vue.js"></script>
+  <script type="text/javascript" src="/Content/Cartoon/js/search.js"></script>
+  <![endif]-->
+  <!--[if !IE]><!--> 
+<script type="text/javascript" src="/Content/Cartoon/js/vue.js"></script>
+  <script type="text/javascript" src="/Content/Cartoon/js/search.js"></script>
+  <!--<![endif]-->
+
+  <script>
+    $(function () {
+      AppSearch.keyword = "";
+
+      $("#topkeyword").focusin(function () {
+        $(".search-sug2").fadeIn(500);
+      });
+
+      $("#topkeyword").focusout(function () {
+        $(".search-sug2").fadeOut(500);
+      });
+
+      $(".item-box").hover(function () {
+        $(this).children(".item-info").hide();
+        $(this).children(".item-button").show();
+      }, function () {
+        $(this).children(".item-button").hide();
+        $(this).children(".item-info").show();
+      });
+
+      var imgDiv = $('#img-div').unslider({
+        dots: true
+      });
+
+      var imgDivData = imgDiv.data('unslider');
+
+
+      /*点击显示更多分类*/
+      $(".look-more").click(function () {
+        if ($(this).hasClass("look-less")) {
+          $(this).parent().find(".menu-nav-tags").css("height", "30px");
+          $(this).removeClass("look-less");
+          $(this).find(".look-more-img").css("background", "url(images/selectarrow-down.png) no-repeat center");
+          $(this).find(".look-more-tip").text("更多");
+        } else {
+          $(this).parent().find(".menu-nav-tags").css("height", "auto");
+          $(this).addClass("look-less");
+          $(this).find(".look-more-img").css("background", "url(images/selectarrow-up.png) no-repeat center");
+          $(this).find(".look-more-tip").text("收起");
+        }
+      });
+
+      $(".fenye a").click(function () {
+        var pc = 4998;
+        var v = $(this).data("value");
+        var p = Math.max(1, Math.min(pc, v));
+        var url = "/s_" + p + "_0_0_0_0_1_.html";
+        location.href = url;
+      })
+    });
+  </script>
+  
+
+  <script type="text/javascript">
+    var m1 = new MyModal.modal(function () {});
+    $('.btn1').on("click", function () {
+      m1.show();
+    });
+
+    var m2 = new MyModal2.modal(function () {});
+    $('.btn2').on("click", function () {
+      m2.show();
+    });
+
+    var m3 = new MyModal3.modal(function () {}, function () {
+      stopAjaxCheck();
+    });
+    $('.btn3').on("click", function () {
+      m3.show();
+    });
+  </script>
+  <script>
+    $(function () {
+      // 收藏按钮
+      $(".bt-body .hover-pop .pop-tit a,.no-coll").click(function () {
+        var v = $(this).data("value");
+        var url = "/Favorite_" + v + ".html";
+        $.get(url, function (data) {
+          layer.alert(data);
+        });
+      });
+
+      // 下载按钮
+      $(".download-btn,.xiazai").click(function () {
+        var id = $(this).data("value");
+        var url = "/Down_" + id + ".html";
+        $.post(url, null, function (result) {
+          try {
+            switch (result.Code) {
+              case (200):
+                var data = result.Data;
+                location.href = data.url;
+                break;
+              case (403):
+                layer.alert("请登陆", {
+                  icon: 2
+                }, function (index) {
+                  layer.close(index);
+                  m2.show();
+                });
+                break;
+              case (405):
+                layer.alert(result.Message, {
+                  icon: 2
+                }, function (index) {
+                  layer.close(index);
+                  m1.show();
+                });
+                break;
+              default:
+                layer.alert(result.Message, {
+                  icon: 3
+                });
+                break;
+            }
+          } catch (err) {
+            layer.msg("系统出现异常,请联系管理员");
+          }
+        });
+      });
+    });
+  </script>
+  <script>
+    var ordernumber = 0;
+    var timeCheckOrderStatus = 4000;
+    var taskCheckOrderStatus = 0;
+    var url = "/user/user_ajaxResult.html";
+
+    function checkOrderStatus() {
+      var postdata = {
+        ordernumber: ordernumber
+      }
+      $.post(url, postdata, function (data) {
+        if (data == "ok") {
+          stopAjaxCheck();
+          m3.hide();
+          layer.alert("支付成功，会员已经开通", {
+            icon: 1
+          }, function (index) {
+            layer.close(index);
+            window.top.location.reload();
+          });
+        }
+      });
+    }
+
+    function stopAjaxCheck() {
+      // console.log("停止轮询检测订单状态");
+      clearTimeout(taskCheckOrderStatus);
+      taskCheckOrderStatus = 0;
+    }
+
+    function startAjaxCheck() {
+      // console.log("开始轮询检测订单状态");
+      if (taskCheckOrderStatus == 0) {
+        taskCheckOrderStatus = setInterval(checkOrderStatus, timeCheckOrderStatus);
+      }
+    }
+
+    function openWindow(orderno) {
+      $("form#pay input[name=orderno]").val(orderno);
+      $("form#pay").submit();
+    }
+
+    $(function () {
+      $("ul.baonian>li>a").click(function () {
+        $("ul.baonian>li>a").removeClass("bn_on");
+        $(this).addClass("bn_on");
+      });
+      $("ul.chongzhi>li>a").click(function () {
+        $("ul.chongzhi>li>a").removeClass("zf_on");
+        $(this).addClass("zf_on");
+      });
+
+      $(".lj_cz a").click(function () {
+        var url = "/user/user_pay.html";
+        var postdata = {
+          payno: $("ul.baonian>li>a.bn_on").data("value"),
+          paytype: $("ul.chongzhi>li>a.zf_on").data("value")
+        };
+        $.post(url, postdata, function (result, status) {
+          try {
+              switch (result.Code) {
+              case (302):
+              case (200):
+                data = result.Data;
+                ordernumber = data.ordernumber;
+                $(".tanceng3_m .saoyisao #channel").html(data.channel);
+                $(".tanceng3_m .saoyisao #money").html(data.money);
+                var url2 = "/Jump.html?orderno=" + ordernumber;
+                $("#orderinfo").attr("src", url2);
+                m3.show();
+                setTimeout(startAjaxCheck, 5000);
+                break;
+              default:
+                layer.msg(result.Message);
+                break;
+            }
+          } catch (err) {
+            layer.msg("支付出现错误");
+          }
+        });
+      });
+    });
+  </script>
+  <script type="text/javascript" charset="utf-8">
+  $(function() {
+      $("img.lazy").lazyload({effect: "fadeIn"});
+  });
+  function opensosuo() {
+layer.open({
+  type: 1,
+  title: '搜索规则技巧提示', 
+  skin: 'layui-layer-rim', //加上边框
+  area: ['700px', '450px'], //宽高
+  content: '<img src="http://js.99ppt.com/Content/Cartoon/images/tishiso.png" />'
+});
+    }
+</script>
+  <!--
+    <script>
+    function login(method) {
+      switch (method) {
+        case "qq":
+          url = "/qlogin.html";
+          break;
+        case "wx":
+          url = "/wlogin.html";
+          break;
+        default:
+          url = "/login.html";
+      }
+      window.open(url, "login", "width=720,height=540")
+    }
+
+    //$(".dl1,.dl1 span").click(function () {
+      login("qq");
+    });
+
+    //$(".dl2,.dl2 span").click(function () {
+      login("wx");
+    });
+  </script>
+  -->
+<div style="display: none">
+  <script src="https://s13.cnzz.com/z_stat.php?id=1271667195&web_id=1271667195" language="JavaScript"></script>
+  
+</div>
+</body>
+</html>

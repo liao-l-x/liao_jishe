@@ -1,0 +1,28 @@
+{% extends "user/moban.html" %}
+
+{% block  content %}
+     <style>
+    .lg{
+        width: 80%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    </style>
+    <h3 style="margin:10px 44% 0">创建</h3>
+    <div class="lg">
+        <form action="/user/create.html" method="post" novalidate >{#enctype="multipart/form-data" 文件#}
+            <p>姓名<input type="text" name="name"></p>
+            <p>密码<input type="password" name="pwd" value="123456"></p>
+            <p>公司<select name="company">
+                {% for company in branch_company %}
+                    <option value="{{ company}}">{{company.name }}</option>
+                {% endfor %}
+                </select></p>
+                <p>男<input type="radio" name="sex" value="1">
+                女<input type="radio" name="sex" value="2"></p>
+                <P>电话<input type="text" name="phone"></P>
+            <P style="margin:10px 44% 0"><input type="submit" value="创建"></P>
+        </form>
+    </div>
+
+{% endblock %}

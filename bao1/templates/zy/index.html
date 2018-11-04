@@ -1,0 +1,71 @@
+{% extends "zy/moban.html" %}
+{% block  menu %}
+<div class="menu">
+    <style>
+        .title{
+            line-height : 40px;
+            margin:0 0 0 55px;
+
+             float: left;
+        }
+        .title1{
+            line-height : 40px;
+            float: left;
+            margin: 0 0 0 15px;
+        }
+        .title2{
+            line-height : 40px;
+            float: right;
+            margin: 0 15px 0 0;
+        }
+        .xianzhong{
+            background-color: orange;
+        }
+    </style>
+    <div class="title">见鬼的论坛</div>
+    {% if not kwargs.zyfenlei %}
+         <a class="title1 xianzhong" href="/web/index/">全部</a>
+    {% else %}
+        <a class="title1" href="/web/index/">全部</a>
+    {% endif %}
+    {% for tent in zyfenlei_list %}
+        {% if tent.0 == kwargs.zyfenlei %}
+            <a class="title1 xianzhong" href="/web/index/{{ tent.0 }}.html">{{ tent.1 }}</a>
+        {% else %}
+            <a class="title1" href="/web/index/{{ tent.0 }}.html">{{ tent.1}}</a>
+        {% endif %}
+   {% endfor %}
+    {% if user_s %}
+       <img  class="title2" src="/{{ user_s.img }}"style="width:40px;height: 40px">
+        <a class="title2" href="/web/grzy">{{ user_s.name }}</a>
+    {% else %}
+        <a class="title2" href="/web/loing">登入</a>
+        <a class="title2" href="/web/enroll">注册</a>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block content %}
+    <style>
+    .article{
+        width: 100%;
+        height: 100px;
+        background-color: yellow;
+    }
+    </style>
+    {% for article in article_s %}
+    <div class="article">
+    <img src="/{{ article.author.img }}">{{ article.article_nr.content }}
+    </div>
+    {% endfor %}
+{% endblock %}
+
+{% block ladel2 %}
+    reiogth tghirtwoh rietheiorhg riogjotgh origjtiobr roigjorjbfovnvwo rgjori rijgrtio ribjifd roijgbor rjor robjr borjb
+{% endblock %}
+
+ {% block ladel %}
+     djsk dkjfgvek neoi neo jeoirjo nofbjoei n noeirj neorijo no fjon oj ofejknjejonknoskj ondo
+ {% endblock %}
+
+
